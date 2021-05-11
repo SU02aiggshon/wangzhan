@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" href="/css/resect.css" />
+	</head>
+	<style>
+		.b-header{
+			padding-top: 50%;
+			z-index: -1;
+			width: 100%;
+			background: url(img/newdog.png);
+			background-size:100% 100% ;
+		}
+		/*.b-header{
+			box-sizing: border-box;
+			padding: 20px 0;
+			border-width: 100%;
+			height: 500px;
+		}*/
+		.h-header{
+			box-sizing: border-box;
+			padding-bottom: 20px;
+			width: 100%;
+			height: 100%;
+			margin-top: -50%;
+		}
+		.h-header img{
+			width: 20%;
+			height: 50%;
+			padding-right: 10%;
+			float: left;
+			margin-top: 20px ;
+			margin-left: 30px;
+		}
+		.h-header li{
+			text-align: center;
+			color: white;
+			font-weight: 700;
+			margin: 40px 30px;
+			float: left;
+			width: 100px;
+			height: 20px;
+			line-height: 20px;
+		}
+		.b-footer{
+			width: 100%;
+			height: 300px;
+			background: black;
+		}
+		.in-warp{
+			width: 100%;
+			margin-top: -75%;
+		}
+		.in-warp h1{
+			padding-bottom: 20px;
+			text-align: center;
+			font-size: 30px;
+		}
+		.in-warp span{
+			font-size: 20px;
+		}
+		.h-content{
+			padding-top: 50%;
+			width: 50%;
+			padding-left: 25%;
+			padding-right: 25%;
+		}
+		.spread{
+			width: 50px;
+			height: 50px;
+			background: black;
+			float: right;
+			margin-top: 20px;
+			display: none;
+		}
+		.aboutus{
+			margin-top: 50px;
+			width: 100%;
+		}
+		.aboutus>h1,.product>h1{
+			font-size: 45px;
+			height: 50px;
+			line-height: 50px;
+			width: 100%;
+			text-align: center;
+		}
+		.aboutus>span,.product>span{
+			display: block;
+			width: 200px;
+			margin: 10px auto;
+			font-size: 10px;
+		}
+		.aboutus ul{
+			overflow: auto;
+			margin-top: 30px;
+			width: 100%;
+		}
+		.aboutus li{
+			padding: 10px 30px;
+			box-sizing: border-box;
+			float: left;
+			width: 25%;
+			height: 280px;
+		}
+		.aboutus li h1{
+			font-size: 30px;
+			height: 40px;
+			line-height: 40px;
+			width: 100%;
+			text-align: left;
+		}
+		.aboutus li span{
+			margin-top: 10px;
+			display: block;
+			width: 100%;
+			height: 170px;
+		}
+		@media only screen and (max-width: 1000px) {
+			.h-header ul{
+				display: none;
+			}
+			.spread{
+			width: 50px;
+			height: 50px;
+			background: black;
+			float: right;
+			margin-top: 20px;
+			display: block;
+		}
+			.h-header li{
+			text-align: center;
+			color: white;
+			font-weight: 700;
+			width: 100%;
+			float: left;
+			margin: 0;
+			height: 20px;
+			line-height: 20px;
+		}
+		.in-warp span{
+			font-size: 15px;
+		}
+		@media all  and (max-width: 500px) {
+		.content{
+			margin-top: 50%;
+		}
+		.aboutus li{
+			padding: 10px 30px;
+			box-sizing: border-box;
+			float: left;
+			width: 100%;
+			height: 150px;
+		}
+		.h-content{
+			float: left;
+			padding-top: 50%;
+			width: 100%;
+			padding: 0;
+		}
+		.in-warp{
+			width: 100%;
+			margin-top: 50%;
+		}
+		.in-warp h1{
+			text-align: center;
+			font-size: 20px;
+		}
+		.in-warp span{
+			font-size: 5px;
+		}
+		}
+		}
+	</style>
+	<body>
+		<div class="warp">
+			<div class="b-background"></div>
+			<div class="b-header">
+				<div class="h-header">
+					<img src="img/biao.png" />
+					<div class="spread"></div>
+					<ul class="ul">
+						<li>MAIN</li>
+						<li>PRODUCTS</li>
+						<li>ADVENTAGE</li>
+						<li>SERVICE</li>
+					</ul>
+					<div class="h-content">
+						<div class="in-warp">
+						<h1>sobre nosotros</h1>
+						<span>Más de 18 años de maravillosas experiencias nos ratifican como la empresa LÍDER en suministro de tecnología para Medicina Veterinaria en Colombia. </span>
+					</div>
+					</div>
+				</div>
+			</div>
+			<div class="content">
+				<div class="aboutus">
+					<h1>ABOUT US</h1>
+					<span>Ultramedica, como es conocida en todo el territorio nacional, es la primera com</span>
+					<ul>
+						<li>
+						<h1 class="culture">culture</h1>
+						<span>
+							Ultramedica, como es conocida en todo el territorio nacional, es la primera compañía Colombiana en suministrar equipos para Evaluación Cárnica, Condición Corporal y Reproducción Equina y Bovina por ultrasonido de la reconocida marca Esaote Piemedical; También pioneros en la Tecnología Doppler Color y Evalu
+						</span>
+						</li>
+						<li>
+						<h1 class="culture">hope</h1>
+						<span>
+							Ultramedica, como es conocida en todo el territorio nacional, es la primera compañía Colombiana en suministrar equipos para Evaluación Cárnica, Condición Corporal y Reproducción Equina y Bovina por ultrasonido de la reconología Doppler Color y Evalu
+						</span>
+						</li>
+						<li>
+						<h1 class="culture">want</h1>
+						<span>
+							Ultramedica, como es conocida en todo el territorio nacional, es la primer
+							</span>
+						</li>
+						<li>
+						<h1 class="culture">advantage</h1>
+						<span>
+							Ultramedica, como es conocida en todo el territorio nacional, es la primera compañía Colombiana en suministrar equipos para Evaluación Cárnica, Condición Corporal y Reproducción Equina y Bovina por ultrasonido de la reconocida marca Esaote Piemedical; También pioneros en la Tecnología Doppler Color y Evalu
+						</span>
+						</li>
+					</ul>
+				</div>
+			    <div class="product">
+			    	<h1>OUR PRODUCTION</h1>
+					<span>Ultramedica, como es conocida en todo el territorio nacional, es la primera com</span>
+			    </div>
+			</div>
+			<div class="b-footer"></div>
+		</div>
+	</body>
+	<script>
+		document.getElementsByClassName("spread")[0].onclick=function(){
+			document.getElementsByClassName("ul")[0].style.display="block";
+			
+		}
+	</script>
+</html>
