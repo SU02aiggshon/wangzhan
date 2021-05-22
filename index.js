@@ -16,8 +16,21 @@ app.use(views(path.join(__dirname, './views'), {
 }))
 
 app.use( async ( ctx ) => {
+	console.log(ctx.url);
+	if(ctx.url=="/"){
 	await ctx.render('sys1', {
         })
+	}
+	else if(ctx.url=="/product"){
+		console.log("123");
+			await ctx.render('product', {
+        })
+	}
+		else if(ctx.url=="/sproduct"){
+		console.log("123");
+			await ctx.render('sproduct', {
+        })
+	}
 })
 
 app.listen(3000)

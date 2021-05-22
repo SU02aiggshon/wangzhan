@@ -5,8 +5,12 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<title></title>
 		<link rel="stylesheet" href="css/resect.css" />
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.js"></script>
 	</head>
 	<style>
+		*{
+			font-family: "微软雅黑";
+			}
 		.b-header{
 			padding-top: 50%;
 			z-index: -1;
@@ -36,6 +40,7 @@
 			margin-left: 30px;
 		}
 		.h-header li{
+			cursor: pointer;
 			text-align: center;
 			color: white;
 			font-weight: 700;
@@ -49,6 +54,7 @@
 			width: 100%;
 			height: 300px;
 			background: black;
+			margin-top: 100px;
 		}
 		.in-warp{
 			width: 100%;
@@ -74,6 +80,14 @@
 			background: black;
 			float: right;
 			margin-top: 20px;
+			display: none;
+		}
+		.spread2{
+			float: right;
+			margin-right: 20px;
+			background: black;
+			width: 50px;
+			height: 50px;
 			display: none;
 		}
 		.aboutus{
@@ -108,7 +122,20 @@
 			overflow: auto;
 			
 		}
+		.line{
+			margin-top: 12.5px;
+			margin-left: 10px;
+			padding: 5px 0;
+			background-color: white;
+			background-clip:content-box;
+			border-top:5px solid white ;
+			border-bottom:5px solid white ;
+			width: 30px;
+			height: 5px;
+		}
 		.aboutus li h1{
+			color: white;
+			background: black;
 			font-size: 30px;
 			height: 40px;
 			line-height: 40px;
@@ -118,47 +145,71 @@
 		.aboutus li span{
 			margin-top: 10px;
 			display: block;
+			font-size: 15px;
 			width: 100%;
 			min-height: 170px;
 		}
 		.product li{
+			background: black;
+			color: white;
+			border-radius:5px ;
+			cursor: pointer;
 			width: 25%;
 			height: 20px;
 			float: left;
 			text-align: center;
 		}
+		.product{
+			margin-top: 100px;
+		}	
 		.product ul{
 			padding: 50px 0;
 			overflow: auto;
 		}
 		.c-content{
-			margin-top: 100px;
+			position: relative;
+			margin-top: 50px;
 			width: 100%;
 			height: 400px;
 		}
-		.c-content img{
+		.c-c-warp{
+			display: none;
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+		}
+		.c-content .c-image{
 			float: left;
 			width: 60%;
-			height: 90%;
+			padding-top: 30%;
+			background-size:100% 100% ;
+		}
+		.c-content .c-c-des{
+			float: left;
+			width: 40%;
+			height: 100%;
 		}
 		.c-content h1{
-			
-			width: 30%;
+			margin-top: 50px;
+			text-align: center;
+			width: 100%;
 			height: 30px;
 			line-height: 30px;
 			font-size: 25px;
-			float: right;
 		}
 		.c-content span{
-		    float: right;
+			margin-top: 50px;
+			text-align: center;
 			display: block;
-			width: 30%;
+			width: 100%;
 			height: 200px;
 		}
 		.c-content a{
-			margin-top: 20px;
-			width: 30%;
-			float: right;
+			text-align: center;
+			width: 100%;
+			margin-top: 10px;
 			display: block;
 		}
 		@media only screen and (max-width: 1000px) {
@@ -181,11 +232,12 @@
 			min-height: 170px;
 		}
 			.spread{
+				border-radius:5px ;
 			width: 50px;
 			height: 50px;
 			background: black;
 			float: right;
-			margin-top: 20px;
+			margin: 20px 20px;
 			display: block;
 		}
 			.h-header li{
@@ -214,6 +266,7 @@
 		.in-warp{
 			width: 100%;
 			margin-top: 50%;
+			padding-bottom: 30px;
 		}
 		.in-warp h1{
 			text-align: center;
@@ -222,6 +275,51 @@
 		.in-warp span{
 			font-size: 5px;
 		}
+		.aboutus>h1,.product>h1{
+			font-size: 30px;
+			height: 40px;
+			line-height: 40px;
+			width: 100%;
+			text-align: center;
+		}
+		}
+		@media only screen and (min-width: 100px) and (max-width: 700px) {
+		.product li{
+			cursor: pointer;
+			width: 100%;
+			height: 20px;
+			float: left;
+			text-align: center;
+		}
+		.product ul{
+			padding: 50px 0;
+			overflow: auto;
+			display: none;
+		}
+		.c-content .c-image{
+			float: left;
+			width: 100%;
+			padding-top: 50%;
+			background-size:100% 100% ;
+		}
+		.c-content .c-c-des{
+			float: left;
+			width: 100%;
+			height: 400px;
+		}
+		.c-content{
+			position: relative;
+			margin-top: 50px;
+			width: 100%;
+			height: 700px;
+		}
+			.spread2{
+			float: right;
+			margin-right: 20px;
+			background: black;
+			width: 50px;
+			height: 50px;
+			display: block;
 		}
 		}
 	</style>
@@ -231,10 +329,12 @@
 			<div class="b-header">
 				<div class="h-header">
 					<img src="img/biao.png" />
-					<div class="spread"></div>
+					<div class="spread">
+						<div class="line"></div>
+					</div>
 					<ul class="ul">
 						<li>MAIN</li>
-						<li>PRODUCTS</li>
+						<li><a href="product">PRODUCTS</a></li>
 						<li>ADVENTAGE</li>
 						<li>SERVICE</li>
 					</ul>
@@ -280,29 +380,81 @@
 			    <div class="product">
 			    	<h1>OUR PRODUCTION</h1>
 					<span>Ultramedica, como es conocida en todo el territorio nacional, es la primera com</span>
+					<div class="spread2">
+			        		<div class="line"></div>
+			        	</div>
 			        <ul>
-			        	<li>兽用x线设备</li>
-			        	<li>兽用呼吸麻醉机系列</li>
-			        	<li>兽用检验设备</li>
-			        	<li>兽用监护系列</li>
+			        	<li>X ray</li>
+			        	<li>Anesthesia</li>
+			        	<li>Inspection</li>
+			        	<li>Ultrsound</li>
 			        </ul>
-			        <div class="c-content">
-			        	<img src="img/slide-3.png" />
+			        <div class="c-content" style="display: block;">
+			        	<div class="c-c-warp">
+			        	<div class="c-image" style="background: url(img/test11.png); background-size:100% 100% ;"></div>
 			        	<div class="c-c-des">
 			        		<h1>FIRST USE</h1>
 			        		<span>ica, como es conocida en todo el territorio nacional, es la p</span>
-			        		<a href="">vue more</a>
+			        		<a href="product">vue more</a>
+			        	</div>
+			        	</div>
+			        	<div class="c-c-warp">
+			        	<div class="c-image" style="background: url(img/test22.png); background-size:100% 100% ;"></div>
+			        	<div class="c-c-des">
+			        		<h1>SECOND USE</h1>
+			        		<span>ica, como es conocida enca, como es conocida enca, como es conocida en todo el territorio nacional, es la p</span>
+			        		<a href="product">vue more</a>
+			        	</div>
+			        	</div>
+			        	<div class="c-c-warp">
+			        	<div class="c-image" style="background: url(img/test33.png); background-size:100% 100% ;"></div>
+			        	<div class="c-c-des">
+			        		<h1>THIRD USE</h1>
+			        		<span>ica, como es conocida en todoca, como es conocida en el territorio nacional, es la p</span>
+			        		<a href="product">vue more</a>
+			        	</div>
+			        	</div>
+			        	<div class="c-c-warp">
+			        	<div class="c-image" style="background: url(img/test44.png); background-size:100% 100% ;"></div>
+			        	<div class="c-c-des">
+			        		<h1>FOURTH USE</h1>
+			        		<span>ica, como es conocida enca, como es conocida enca, como es conocida en todo el territorio nacional, es la p</span>
+			        		<a href="product">vue more</a>
+			        	</div>
 			        	</div>
 			        </div>
 			    </div>
+			    <div class="mainproduct"></div>
 			</div>
 			<div class="b-footer"></div>
 		</div>
 	</body>
 	<script>
-		document.getElementsByClassName("spread")[0].onclick=function(){
-			document.getElementsByClassName("ul")[0].style.display="block";
-			
+		$(".c-c-warp").eq(0).fadeIn();
+		//控制第一个导航条
+		$(".spread").click(function(){
+			if($('.h-header ul').css("display")=="none")
+			$(".h-header ul").css("display","block")
+			else
+			$(".h-header ul").css("display","none")
+		})
+		//控制第二个导航条
+		$('.spread2').click(function(){
+			if($('.product ul').css("display")=="none")
+			$('.product ul').css("display","block")
+			else
+			$('.product ul').css("display","none")
+		})
+		for(var i=0;i<4;i++){
+			(function(k){
+				
+			$(".product li").eq(k).click(function(){
+				for(var i=0;i<4;i++){
+					$(".c-c-warp").eq(i).fadeOut()
+				}
+				$(".c-c-warp").eq(k).fadeIn();
+			})
+			})(i)
 		}
 	</script>
 </html>

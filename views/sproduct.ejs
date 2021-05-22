@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" href="css/resect.css" />
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.js"></script>
+	</head>
+	<style type="text/css">
+		.h-header{
+			margin: auto;
+			box-sizing: border-box;
+			padding-bottom: 20px;
+			width: 100%;
+		}
+		.h-header img{
+			display: block;
+			width: 20%;
+			height: 40px;
+			padding-right: 6%;
+			float: left;
+			margin-left: 30px;
+			margin-top: 20px;
+		}
+		.h-header li{
+			display: block;
+			font-family: "微软雅黑";
+			cursor: pointer;
+			text-align: center;
+			color: black;
+			font-weight: 700;
+			float: left;
+			width: 100px;
+			height: 40px;
+			line-height: 40px;
+			margin: 20px 20px;
+		}
+		.h-header ul{
+			display: block;
+			}
+		.spread{
+			width: 50px;
+			height: 50px;
+			background: black;
+			float: right;
+			margin-top: 20px;
+			display: none;
+		}
+		.line{
+			margin-top: 12.5px;
+			margin-left: 10px;
+			padding: 5px 0;
+			background-color: white;
+			background-clip:content-box;
+			border-top:5px solid white ;
+			border-bottom:5px solid white ;
+			width: 30px;
+			height: 5px;
+		}
+		@media only screen and (max-width: 1000px) {
+			.h-header ul{
+				display: none;
+			}
+			.spread{
+				border-radius:5px ;
+			width: 50px;
+			height: 50px;
+			background: black;
+			float: right;
+			margin: 20px 20px;
+			display: block;
+		}
+			.h-header li{
+			text-align: center;
+			color: black;
+			font-weight: 700;
+			width: 100%;
+			float: left;
+			margin: 0;
+			height: 20px;
+			line-height: 20px;
+		}
+		}
+	</style>
+	<body>
+		<div class="warp">
+			<div class="h-header">
+					<img src="img/biao.png" />
+					<div class="spread">
+						<div class="line"></div>
+					</div>
+					<ul class="ul">
+						<li><a href="/">MAIN</a></li>
+						<li><a href="product">PRODUCTS</a></li>
+						<li><a href="product">SERVICE</a></li>
+						<li><a href="product">PARTENER</a></li>
+						<li><a href="product">CONTACT</a></li>
+					</ul>
+					</div>
+		</div>
+		
+	</body>
+	<script type="text/javascript">
+		//控制第一个导航条
+		$(".spread").click(function(){
+			if($('.h-header ul').css("display")=="none")
+			$(".h-header ul").css("display","block")
+			else
+			$(".h-header ul").css("display","none")
+		})
+	</script>
+	
+</html>
