@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="/css/public.css" />
+	</head>
+	<style type="text/css">
+		.h-header{
+			overflow: auto;
+			box-sizing: border-box;
+			width: 100%;
+		}
+		a{
+			text-decoration: none;
+		}
+		.h-header:after{
+			content: "";
+			display: block;
+			width: 100%;
+			height: 1px;
+			margin-top: 100px;
+		}
+		.h-header img{
+			display: block;
+			width: 20%;
+			height: 40px;
+			padding-right: 6%;
+			float: left;
+			margin-left: 30px;
+			margin-top: 20px;
+		}
+		.h-header li{
+			display: block;
+			font-family: "微软雅黑";
+			cursor: pointer;
+			text-align: center;
+			color: black;
+			font-weight: 700;
+			float: left;
+			width: 100px;
+			height: 40px;
+			line-height: 40px;
+			margin: 20px 20px;
+		}
+		.h-header ul{
+			display: block;
+			}
+		.spread{
+			width: 50px;
+			height: 50px;
+			background: black;
+			float: right;
+			margin-top: 20px;
+			display: none;
+		}
+		.line{
+			margin-top: 12.5px;
+			margin-left: 10px;
+			padding: 5px 0;
+			background-color: white;
+			background-clip:content-box;
+			border-top:5px solid white ;
+			border-bottom:5px solid white ;
+			width: 30px;
+			height: 5px;
+		}
+		.pro-list{
+			margin-top: 150px;
+		}
+		.pro-list li {
+			width: 100%;
+			height: 400px;
+		}
+		.pro-list li span{
+			box-sizing: border-box;
+			font-size: 25px;
+			padding: 30px 30px;
+			display: block;
+			width: 50%;
+			height: 100%;
+			float: left;
+		}
+		.pro-list li span:first-child{
+			background: url(../img/newdog.png);
+			background-size:100% 100%;
+		}
+		@media only screen and (max-width: 1000px) {
+			.h-header ul{
+				display: none;
+			}
+			.spread{
+				border-radius:5px ;
+			width: 50px;
+			height: 50px;
+			background: black;
+			float: right;
+			margin: 20px 20px;
+			display: block;
+		}
+			.h-header li{
+			text-align: center;
+			color: black;
+			font-weight: 700;
+			width: 100%;
+			float: left;
+			margin: 0;
+			height: 20px;
+			line-height: 20px;
+		}
+		}
+	</style>
+	<style>
+		/*页脚导航*/
+		
+
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.top{
+			padding-top: 50%;
+			box-sizing: border-box;
+			width: 100%;
+			background: url(img/contact.jpg);
+			background-size:100% 100% ;
+		}
+		.top h1{
+			margin: auto;
+			margin-top: -50%;
+			width: 80%;
+			height: 100px;
+			line-height: 100px;
+			font-size: 40px;
+			color: white;
+			text-align: center;
+		}
+		.top p{
+			margin: auto;
+			width: 80%;
+			height: 50px;
+			line-height: 50px;
+			font-size: 20px;
+			color: white;
+			text-align: center;
+		}
+		.message{
+			overflow: auto;
+			margin: 50px 10% 0;
+			box-sizing: border-box;
+			width:80%;
+			height: auto;
+		}
+		.message div{
+			width: 50%;
+			height: 100%;
+			float: left;
+		}
+		.message label{
+			text-align: left;
+			font-size: 18px;
+			margin-top: 30px;
+			line-height: 30px;
+			float: left;
+			width: 25%;
+			height: 30px;
+		}
+		.message input{
+			font-size: 15px;
+			margin-top: 30px;
+			float: left;
+			width: 65%;
+			height: 30px;
+		}
+		.message textarea{
+			text-indent: 20px;
+			line-height: 25px;
+			font-size: 20px;
+			margin-top: 30px;
+			width: 70%;
+			height: 200px;
+			float: left;
+		}
+		.submit{
+			padding: 0 25%;
+			margin: auto;
+			display: block;
+			width: 60%;
+		}
+		.message p{
+			float: left;
+			width: 100%;
+			height: auto;
+			line-height: 30px;
+			text-align: center;
+			margin:20px auto;
+			color: blue;
+		}
+		@media only screen and (max-width:900px ) {
+			.message div{
+			width: 100%;
+			height: 100%;
+			float: left;
+		}
+		}
+			@media only screen and (max-width:500px ) {
+			.message div{
+			width: 100%;
+			height: 100%;
+			float: left;
+		}
+		.message label{
+			text-align: left;
+			font-size: 18px;
+			margin-top: 30px;
+			line-height: 30px;
+			float: left;
+			width: 100%;
+			height: 30px;
+		}
+		.message input{
+			box-sizing: border-box;
+			font-size: 15px;
+			margin-top: 30px;
+			float: left;
+			width: 95%;
+			height: 29px;
+		}
+		.message textarea{
+			box-sizing: border-box;
+			text-indent: 20px;
+			line-height: 25px;
+			font-size: 20px;
+			margin-top: 30px;
+			width: 100%;
+			height: 200px;
+			float: left;
+		}
+		}
+	</style>
+	<body>
+		<%- include('head') %>
+		<div class="top">
+			<h1>We want to hear from you</h1>
+			<p>TEL:18341323671</p>
+			<p>Email:1174607294@qq.com</p>
+		</div>
+		<div class="message">
+			<form method="POST" action="/upload" enctype="multipart/form-data">
+				<div class="form-left">
+				<label for="name">name:</label>
+				<input type="text" name="name" />
+				<label for="email">email:</label>
+				<input type="email" name="email" />
+				<label for="subject">subject:</label>
+				<input type="text" name="subject" />
+				<label for="phone">phone:</label>
+				<input type="text" name="phone" />
+				</div>
+				<div class="form-right">
+				<label for="company">company:</label>
+				<input type="text" name="company" />
+				<label for="content">message:</label>
+				<textarea></textarea>
+				<span class="submit">
+				<input type="submit" value="send message" />
+				</span>
+				</div>
+				<p>PS:check this form you can send your idea or advice to us to let us make more confortable service</p>
+			</form>
+		</div>
+		<%- include('foot') %>
+	</body>
+</html>

@@ -5,10 +5,12 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<title></title>
 		<link rel="stylesheet" href="css/resect.css" />
+		<link rel="stylesheet" href="/css/public.css" />
 		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.js"></script>
 	</head>
 	<style type="text/css">
 		.h-header{
+			border-bottom: 3px solid red;
 			margin: auto;
 			box-sizing: border-box;
 			padding-bottom: 20px;
@@ -58,6 +60,26 @@
 			width: 30px;
 			height: 5px;
 		}
+		.pro-list{
+			margin-top: 150px;
+		}
+		.pro-list li {
+			width: 100%;
+			height: 400px;
+		}
+		.pro-list li span{
+			box-sizing: border-box;
+			font-size: 25px;
+			padding: 30px 30px;
+			display: block;
+			width: 50%;
+			height: 100%;
+			float: left;
+		}
+		.pro-list li span:first-child{
+			background: url(../img/newdog.png);
+			background-size:100% 100%;
+		}
 		@media only screen and (max-width: 1000px) {
 			.h-header ul{
 				display: none;
@@ -85,7 +107,7 @@
 	</style>
 	<body>
 		<div class="warp">
-			<div class="h-header">
+			<!--<div class="h-header">
 					<img src="img/biao.png" />
 					<div class="spread">
 						<div class="line"></div>
@@ -97,7 +119,18 @@
 						<li><a href="product">PARTENER</a></li>
 						<li><a href="product">CONTACT</a></li>
 					</ul>
-					</div>
+			</div>-->
+			<%- include('head') %>
+			<% if (products.length) { %> 
+			<ul class="pro-list">
+				 <% products.forEach(function(name){ %>  
+                    <li>
+                    	<span style="background:<%= name.url %> ; background-size:100% 100% ;"></span>
+                    	<span><%= name.data %></span>
+                    	</li>  
+                 <% }) %>
+			</ul>
+			<% } %> 
 		</div>
 		
 	</body>
@@ -109,6 +142,8 @@
 			else
 			$(".h-header ul").css("display","none")
 		})
+		//控制左右单双分开
+		$('.pro-list li:even span').css("float","right")
 	</script>
 	
 </html>

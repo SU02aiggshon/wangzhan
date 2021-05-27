@@ -5,6 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<title></title>
 		<link rel="stylesheet" href="css/resect.css" />
+		<link rel="stylesheet" href="css/public.css" />
 		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.js"></script>
 	</head>
 	<style>
@@ -17,9 +18,8 @@
 		*{
 			font-family: "微软雅黑";
 			}
-		.b-footer{
+		.bb-footer{
 			margin-top: 100px;
-			float: left;
 			width: 100%;
 			min-height: 400px;
 		}
@@ -100,7 +100,7 @@
 			position: relative;
 			margin-top: 100px;
 			width: 100%;
-			height: 500px;
+			height: 600px;
 		}
 		.pro-top p{
 			right: 0;
@@ -109,9 +109,9 @@
 			text-align: center;
 			display: block;
 			float: left;
-			line-height: 500px;
+			line-height: 600px;
 			width: 10%;
-			height: 500px;
+			height: 100%;
 		}
 		.pro-top p:first-child{
 			z-index: 20;
@@ -121,9 +121,9 @@
 			text-align: center;
 			display: block;
 			float: left;
-			line-height: 500px;
+			line-height: 600px;
 			width: 10%;
-			height: 500px;
+			height: 100%;
 		}
 		.pro-top .pro-con{
 			position: absolute;
@@ -132,21 +132,22 @@
 			overflow: hidden;
 			float: left;
 			width:100% ;	
-			height: 500px;	
+			height: 100%	
 		}	
 		.pro-top .pro-con span{
 			transition: 0.7s;
 			display: block;
 			width: 400%;
-			height: 500px;
+			height: 100%;
 		}	
 		.pro-top .pro-con span img{
 			display: block;
 			width: 25%;
-			height: 500px;
+			height: 100%;
 			float: left;
 		}		
 		.chose{
+			padding: 0 100px;
 			margin-top: 30px;
 			}
 		.chose li{
@@ -160,10 +161,13 @@
 			float: left;
 			overflow: hidden;
 		}
+		.warp{
+			overflow: auto;
+		}
 		.chose li span{
-			transition: all 1s; 
+			transition: all 0.5s; 
 			top: 0;
-			background: rgba(150,150,150,0.5);
+			background: rgba(1,150,150,0.5);
 			position: absolute;
 			box-sizing: border-box;
 			padding-top:50% ;
@@ -176,7 +180,7 @@
 			top: 50%;
 			}
 		.chose li span p{
-			font-size: 22px;
+			font-size: 18px;
 			width: 80%;
 			margin: auto;
 			margin-top: -40%;
@@ -230,6 +234,10 @@
 			.h-header ul{
 				display: none;
 			}
+		.chose{
+			padding: 0 50px;
+			margin-top: 30px;
+			}	
 			.spread{
 				border-radius:5px ;
 			width: 50px;
@@ -240,7 +248,7 @@
 			display: block;
 		}
 		.chose li span p{
-			font-size: 15px;
+			font-size: 13px;
 			width: 80%;
 			margin: auto;
 			margin-top: -40%;
@@ -258,6 +266,10 @@
 		}
 		@media only screen and (min-width: 100px) and (max-width: 700px) {
 		
+		.chose{
+			padding: 0 30px;
+			margin-top: 30px;
+			}
 		.chose li{
 			position: relative;
 			height: 10px;
@@ -278,14 +290,28 @@
 		}
 		}
 		@media only screen and (max-width: 500px ) {
+			.chose{
+			margin-top: 30px;
+			padding: 20px 70px;
+			}
+			.chose li{
+			position: relative;
+			height: 10px;
+			box-sizing: border-box;
+			padding-top: 100%;
+			background: url(../img/newdog.png);
+			background-size:100% 100% ;
+			width: 100%;
+			float: left;
+		}
 			.chose li span p{
 			width: 85%;
 			margin: auto;
 			margin-top: -40%;
-			font-size: 10px;
+			font-size: 8px;
 		}
 		}
-		@media only screen and (max-width:350px ) {
+		/*@media only screen and (max-width:350px ) {
 			.chose li{
 			position: relative;
 			height: 10px;
@@ -302,24 +328,11 @@
 			margin-top: -40%;
 			font-size: 17px;
 		}
-		}
+		}*/
 	</style>
 	<body>
 		<div class="warp">
-				<div class="h-header">
-					<img src="img/biao.png" />
-					<div class="spread">
-						<div class="line"></div>
-					</div>
-					<ul class="ul">
-						<li><a href="/">MAIN</a></li>
-						<li><a href="product">PRODUCTS</a></li>
-						<li><a href="product">SERVICE</a></li>
-						<li><a href="product">PARTENER</a></li>
-						<li><a href="product">CONTACT</a></li>
-					</ul>
-					</div>
-				</div>
+			<%- include('head') %>
 			    <div class="mainproduct">
 			    	<div class="pro-top">
 			    		<p><</p>
@@ -378,13 +391,14 @@
 			    	</div>
 			    </div>
 			</div>
-			<div class="b-footer">
+			<div class="bb-footer">
 				<div class="b-descrip">
 					<span style="font-size: 30px;">ＹＯＵＲ　ＣＨＯＳＥ</span>
 					<span style="font-weight: 700;">ＴＨＥ most professional pet medical componey </span>
 					<span>ome description about this product to in this product tome description about this product to in this product tome description about this product to in this product tome description about this product to in this product t</span>
 				</div>
 			</div>
+			<%- include('foot') %>
 		</div>
 	</body>
 	<script>

@@ -27,10 +27,19 @@ app.use( async ( ctx ) => {
         })
 	}
 		else if(ctx.url=="/sproduct"){
-		console.log("123");
 			await ctx.render('sproduct', {
+				products:[{"url":" url(../img/newdog.png)","data":'some description about this product to in this product to introduce to the personsome description about this product to in this product to introduce to the person'},
+				{url:" url(../img/test3.jpg)",data:'some description about this product to in this product to introduce to the personsome description about this product to in this product to introduce to the person'}]
         })
 	}
+		else if(ctx.url=="/contact"){
+			await ctx.render('contact', {
+        })
+		}
+		else if(ctx.url=="/service"){
+			await ctx.render('service', {
+        })
+		}
 })
 
 app.listen(3000)

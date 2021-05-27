@@ -5,6 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<title></title>
 		<link rel="stylesheet" href="css/resect.css" />
+		<link rel="stylesheet" href="css/public.css" />
 		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.js"></script>
 	</head>
 	<style>
@@ -15,7 +16,7 @@
 			padding-top: 50%;
 			z-index: -1;
 			width: 100%;
-			background: url(img/newdog.png);
+			background: url(img/newdog1.jpg);
 			background-size:100% 100% ;
 		}
 		/*.b-header{
@@ -34,17 +35,17 @@
 		.h-header img{
 			width: 20%;
 			height: 50%;
-			padding-right: 10%;
+			padding-right: 5%;
 			float: left;
 			margin-top: 20px ;
 			margin-left: 30px;
 		}
-		.h-header li{
+		.h-header ul.ul li{
 			cursor: pointer;
 			text-align: center;
 			color: white;
 			font-weight: 700;
-			margin: 40px 30px;
+			margin: 40px 20px;
 			float: left;
 			width: 100px;
 			height: 20px;
@@ -53,7 +54,7 @@
 		.b-footer{
 			width: 100%;
 			height: 300px;
-			background: black;
+			background: rgba(0,0,0,0.9);
 			margin-top: 100px;
 		}
 		.in-warp{
@@ -74,6 +75,53 @@
 			padding-left: 25%;
 			padding-right: 25%;
 		}
+		
+		/*面板控制*/
+		
+		.panel{
+			transition: 0.3s;
+			opacity: 0;
+			position: absolute;
+			width: 90%;
+			left: 50%;
+			top: 100px;
+			height: 600px;
+			margin-left: -45%;
+			background: white;
+			}
+		.panel ul{
+			width: 100%;
+			height: 100%;
+			} 
+		.panel li{
+			float: left;
+			text-align: left;
+			color: black;
+			margin: 0;
+			box-sizing: border-box;
+			width: 33.3%;
+			height: 50%;
+			}
+		.panel li dd{
+			color: black;
+			font-size: 12px;
+			font-weight: 400;
+			padding-left: 10px;
+			margin-top: 10px;
+			}
+		.panel li dd a:hover{
+			color: black;
+			font-weight: 600;
+			}	
+		.panel li dt a:hover{
+			color: black;
+			font-weight: 600;
+			}			
+		.panel li dt{
+			font-weight: 600;
+			padding: 10px 10px;
+			font-size: 15px;
+		}			
 		.spread{
 			width: 50px;
 			height: 50px;
@@ -96,9 +144,9 @@
 			width: 100%;
 		}
 		.aboutus>h1,.product>h1{
-			font-size: 45px;
-			height: 50px;
-			line-height: 50px;
+			font-size: 35px;
+			height: 40px;
+			line-height: 40px;
 			width: 100%;
 			text-align: center;
 		}
@@ -107,8 +155,10 @@
 			width: 200px;
 			margin: 10px auto;
 			font-size: 10px;
+			text-align: center;
 		}
 		.aboutus ul{
+			
 			overflow: auto;
 			margin-top: 30px;
 			width: 100%;
@@ -117,11 +167,14 @@
 			padding: 10px 30px;
 			box-sizing: border-box;
 			float: left;
-			width: 25%;
+			width: 23%;
 			height: auto;
 			overflow: auto;
 			
 		}
+		.aboutus li:first-child{
+			margin-left: 4%;
+			}
 		.line{
 			margin-top: 12.5px;
 			margin-left: 10px;
@@ -134,31 +187,50 @@
 			height: 5px;
 		}
 		.aboutus li h1{
+			position: relative;
 			color: white;
-			background: black;
-			font-size: 30px;
-			height: 40px;
-			line-height: 40px;
+			font-size: 20px;
+			height: 25px;
+			line-height: 25px;
 			width: 100%;
 			text-align: left;
 		}
+		.aboutus li h1 p{
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 25px;
+			font-size: 20px;
+			line-height: 25px;
+			color: black;
+			text-indent: 30px;
+		}	
 		.aboutus li span{
+			color: rgba(150,150,150,1);
 			margin-top: 10px;
 			display: block;
-			font-size: 15px;
+			font-size: 11px;
 			width: 100%;
-			min-height: 170px;
+			min-height: 150px;
 		}
 		.product li{
 			background: black;
 			color: white;
 			border-radius:5px ;
 			cursor: pointer;
-			width: 25%;
-			height: 20px;
+			width: 23%;
+			line-height: 40px;
+			height: 40px;
 			float: left;
 			text-align: center;
 		}
+		.product li:first-child{
+			margin-left: 4%;
+		}	
+		.product li:hover{
+			background: blue;
+		}	
 		.product{
 			margin-top: 100px;
 		}	
@@ -182,13 +254,15 @@
 		}
 		.c-content .c-image{
 			float: left;
-			width: 60%;
+			width: 50%;
 			padding-top: 30%;
 			background-size:100% 100% ;
 		}
 		.c-content .c-c-des{
+			box-sizing: border-box;
+			padding-right: 10%;
 			float: left;
-			width: 40%;
+			width: 50%;
 			height: 100%;
 		}
 		.c-content h1{
@@ -200,6 +274,7 @@
 			font-size: 25px;
 		}
 		.c-content span{
+			color: rgb(150,150,150);
 			margin-top: 50px;
 			text-align: center;
 			display: block;
@@ -207,15 +282,100 @@
 			height: 200px;
 		}
 		.c-content a{
+			color: white;
 			text-align: center;
-			width: 100%;
-			margin-top: 10px;
+			width: 100px;
+			height: 30px;
+			line-height: 30px;
+			border-radius:7px ;
+			margin: 10px auto 0;
+			background: blue;
 			display: block;
 		}
+		/*页脚导航*/
+		.navigation{
+			width: 100%;
+			height: 100%;
+		}	
+		.navigation .neg-bac{
+			line-height:100px ;
+			padding-left: 13%;
+			width: 50%;
+			height: 20%;
+			color: white;
+		}	
+		.navigation ul{
+			width: 50%;
+			height: 80%;
+			float: left;
+			}
+		.navigation li{
+			font-size: 13px;
+			width: 70%;
+			height: 15%;
+			margin-left: 30%;
+			float: left;
+			}	
+		.navigation li:first-child{
+			margin-top: 30px;
+			}	
+		.navigation li a{
+			color: rgba(150,150,150,0.8);;
+			}	
+			
+			/*页面底部文字轮播*/
+		.mainproduct{
+			width: 70%;
+			height: 300px;
+			margin: auto;
+			margin-top: 150px;
+			}	
+		.mainproduct img{
+			width: 15%;
+			height: 100%;
+			float: left;
+		}
+		.mainproduct>div{
+			overflow: hidden;
+			text-align: center;
+			width: 70%;
+			height: 100%;
+			float: left;
+			}
+		.mainproduct h1{
+			width: 100%;
+			height: 30%;
+			text-align: center;
+			}
+		.mainproduct p{
+			width: 100%;
+			height: 70%;
+			text-align: center;	
+		}		
+		.b-content{
+			transition: 1s;
+			width: 400%;
+			height: 100%;
+		}	
+		.b-content ul{
+			width: 100%;
+			height: 100%;
+		}
+		.b-content li{
+			box-sizing: border-box;
+			padding: 20px;
+			padding-top: 50px;
+			width: 25%;
+			height: 100%;
+			float: left;
+		}				
 		@media only screen and (max-width: 1000px) {
 			.h-header ul{
 				display: none;
 			}
+			.panel{
+				display: none;
+			}	
 			.aboutus li{
 			padding: 10px 30px;
 			box-sizing: border-box;
@@ -225,11 +385,26 @@
 			overflow: auto;
 			
 		}
-			.aboutus li span{
+		.aboutus li:first-child{
+			margin-left: 0;
+			}
+		.aboutus li h1{
+			position: relative;
+			color: white;
+			font-size: 20px;
+			height: 25px;
+			line-height: 25px;
+			width: 100%;
+			text-align: left;
+		}
+		.aboutus li span{
+			color: rgba(150,150,150,1);
+			text-align: center;
 			margin-top: 10px;
 			display: block;
+			font-size: 10px;
 			width: 100%;
-			min-height: 170px;
+			min-height: 150px;
 		}
 			.spread{
 				border-radius:5px ;
@@ -264,8 +439,9 @@
 			padding: 0;
 		}
 		.in-warp{
-			width: 100%;
-			margin-top: 50%;
+			margin: auto;
+			width: 80%;
+			margin-top: 40%;
 			padding-bottom: 30px;
 		}
 		.in-warp h1{
@@ -287,9 +463,27 @@
 		.product li{
 			cursor: pointer;
 			width: 100%;
-			height: 20px;
+			height: 30px;
+			line-height: 30px;
 			float: left;
 			text-align: center;
+		}
+		.product li:first-child{
+			margin-left: 0;
+		}
+		.aboutus>h1,.product>h1{
+			font-size: 30px;
+			height: 30px;
+			line-height: 30px;
+			width: 100%;
+			text-align: center;
+		}
+		.aboutus>span,.product>span{
+			text-align: center;
+			display: block;
+			width: 200px;
+			margin: 10px auto;
+			font-size: 10px;
 		}
 		.product ul{
 			padding: 50px 0;
@@ -303,15 +497,40 @@
 			background-size:100% 100% ;
 		}
 		.c-content .c-c-des{
+			box-sizing: border-box;
 			float: left;
 			width: 100%;
-			height: 400px;
+			height: auto;
+			min-height: 200px;
+			padding: 0 30px;
+		}
+		.c-content h1{
+			margin-top: 50px;
+			text-align: center;
+			width: 100%;
+			height: 30px;
+			line-height: 30px;
+			font-size: 25px;
+		}
+		.c-content span{
+			margin-top: 50px;
+			text-align: center;
+			display: block;
+			width: 100%;
+			height: 100px;
+		}
+		.c-content a{
+			text-align: center;
+			width: 100%;
+			margin-top: 10px;
+			display: block;
 		}
 		.c-content{
 			position: relative;
 			margin-top: 50px;
 			width: 100%;
-			height: 700px;
+			height: auto;
+			min-height: 500px;
 		}
 			.spread2{
 			float: right;
@@ -333,16 +552,72 @@
 						<div class="line"></div>
 					</div>
 					<ul class="ul">
-						<li>MAIN</li>
-						<li><a href="product">PRODUCTS</a></li>
-						<li>ADVENTAGE</li>
-						<li>SERVICE</li>
+						<li><a href="/">MAIN</a></li>
+						<li class="prod"><a href="product">PRODUCTS</a></li>
+						<li><a href="service">SERVICE</a></li>
+						<li><a href="">PARTENER</a></li>
+						<li><a href="contact">CONTACT</a></li>
 					</ul>
 					<div class="h-content">
-						<div class="in-warp">
+					  <div class="in-warp">
 						<h1>sobre nosotros</h1>
 						<span>Más de 18 años de maravillosas experiencias nos ratifican como la empresa LÍDER en suministro de tecnología para Medicina Veterinaria en Colombia. </span>
-					</div>
+					  </div>
+					  <div class="panel">
+					  	 <ul>
+					  	 	<li>
+					  	 		<dl>
+					  	 			<dt><a href="">product first</a></dt>
+					  	 			<dd><a href="">maravillosas experiencias</a></dd>
+					  	 			<dd><a href="">nos ratifican como la empresanos ratifican como la empresa</a></dd>
+					  	 			<dd><a href="">nos ratifican como la empresa</a></dd>
+					  	 			<dd><a href="">nos ratifican como la empresa</a></dd>
+					  	 			<dd><a href="">nos ratifican como la empresa</a></dd>
+					  	 		</dl>
+					  	 	</li>
+					  	 	<li>
+					  	 		<dl>
+					  	 			<dt><a href="">product first</a></dt>
+					  	 			<dd><a href="">maravillosas experiencias</a></dd>
+					  	 			<dd><a href="">nos ratifican como la empresa</a></dd>
+					  	 			<dd><a href="">nos ratifican como la empresa</a></dd>
+					  	 			<dd><a href="">nos ratifican como la empresa</a></dd>
+					  	 		</dl>
+					  	 	</li>
+					  	 	<li>
+					  	 		<dl>
+					  	 			<dt><a href="">product first</a></dt>
+					  	 			<dd><a href="">maravillosas experiencias</a></dd>
+					  	 			<dd><a href="">nos ratifican como la empresanos ratifican como la empresa</a></dd>
+					  	 			<dd><a href="">nos ratifican como la empresa</a></dd>
+					  	 			<dd><a href="">nos ratifican como la empresa</a></dd>
+					  	 		</dl>
+					  	 	</li>
+					  	 	<li>
+					  	 		<dl>
+					  	 			<dt><a href="">product first</a></dt>
+					  	 			<dd><a href="">maravillosas experiencias</a></dd>
+					  	 			<dd><a href="">nos ratifican como la empresanos ratifican como la empresa</a></dd>
+					  	 			<dd><a href="">nos ratifican como la empresa</a></dd>
+					  	 			<dd><a href="">nos ratifican como la empresa</a></dd>
+					  	 		</dl>
+					  	 	</li>
+					  	 	<li>
+					  	 		<dl>
+					  	 			<dt><a href="">product first</a></dt>
+					  	 			<dd><a href="">maravillosas experiencias</a></dd>
+					  	 		</dl>
+					  	 	</li>
+					  	 	<li>
+					  	 		<dl>
+					  	 			<dt><a href="">product first</a></dt>
+					  	 			<dd><a href="">maravillosas experiencias</a></dd>
+					  	 			<dd><a href="">nos ratifican como la empresanos ratifican como la empresa</a></dd>
+					  	 			<dd><a href="">nos ratifican como la empresa</a></dd>
+					  	 		</dl>
+					  	 	</li>
+					  	 </ul>
+					  </div>
 					</div>
 				</div>
 			</div>
@@ -352,25 +627,33 @@
 					<span>Ultramedica, como es conocida en todo el territorio nacional, es la primera com</span>
 					<ul>
 						<li>
-						<h1 class="culture">culture</h1>
+						<h1 class="culture">
+							<img style="width: 20px; height:20px; margin-top: 2.5px;" src="../img/plus.jpg" />
+							<p>Culture</p></h1>
 						<span>
 							Ultramedica, como es conocida en todo el territorio nacional, es la primera compañía Colombiana en suministrar equipos para Evaluación Cárnica, Condición Corporal y Reproducción Equina y Bovina por ultrasonido de la reconocida marca Esaote Piemedical; También pioneros en la Tecnología Doppler Color y Evalu
 						</span>
 						</li>
 						<li>
-						<h1 class="culture">hope</h1>
+						<h1 class="culture">
+							<img style="width: 20px; height:20px; margin-top: 2.5px;" src="../img/plus.jpg" />
+							<p>hope</p></h1>
 						<span>
 							Ultramedica, como es conocida en todo el territorio nacional, es la primera compañía Colombiana en suministrar equipos para Evaluación Cárnica, Condición Corporal y Reproducción Equina y Bovina por ultrasonido de la reconología Doppler Color y Evalu
 						</span>
 						</li>
 						<li>
-						<h1 class="culture">want</h1>
+						<h1 class="culture">
+							<img style="width: 20px; height:20px; margin-top: 2.5px;" src="../img/plus.jpg" />
+							<p>want</p></h1>
 						<span>
 							Ultramedica, como es conocida en todo el territorio nacional, es la primer
 							</span>
 						</li>
 						<li>
-						<h1 class="culture">advantage</h1>
+						<h1 class="culture">
+							<img style="width: 20px; height:20px; margin-top: 2.5px;" src="../img/plus.jpg" />
+							<p>advantage</p></h1>
 						<span>
 							Ultramedica, como es conocida en todo el territorio nacional, es la primera compañía Colombiana en suministrar equipos para Evaluación Cárnica, Condición Corporal y Reproducción Equina y Bovina por ultrasonido de la reconocida marca Esaote Piemedical; También pioneros en la Tecnología Doppler Color y Evalu
 						</span>
@@ -424,12 +707,100 @@
 			        	</div>
 			        </div>
 			    </div>
-			    <div class="mainproduct"></div>
+			    <div class="mainproduct">
+			    	<img src="img/leftswipt.jpg" />
+			    	<div>
+			    		<div class="b-content">
+			    			<ul>
+			    				<li>
+			    					<h1>como es conocida enca, como es</h1>
+			    		<p>como es conocida enca, como escomo es conocida enca, como escomo es conocida enca, como escomo es conocida enca, como escomo es conocida enca, como escomo es conocida enca, como escomo es conocida enca, como es</p>
+			    	
+			    				</li>
+			    				<li>
+			    					<h1>como es conocida enca, como es</h1>
+			    		<p>como es conocida enca, como escomo es conocida enca, como escomo es conocida enca, como escomo es conocida enca, como escomo es conocida enca, como escomo es conocida enca, como escomo es conocida enca, como es</p>
+			    	
+			    				</li>
+			    				<li>
+			    					<h1>como es conocida enca, como es</h1>
+			    		<p>como es conocida enca, como escomo es conocida enca, como escomo es conocida enca, como escomo es conocida enca, como escomo es conocida enca, como escomo es conocida enca, como escomo es conocida enca, como es</p>
+			    	
+			    				</li>
+			    				<li>
+			    					<h1>como es conocida enca, como es</h1>
+			    		<p>como es conocida enca, como escomo es conocida enca, como escomo es conocida enca, como escomo es conocida enca, como escomo es conocida enca, como escomo es conocida enca, como escomo es conocida enca, como es</p>
+			    	
+			    				</li>
+			    			</ul>
+			    		</div>
+			    	</div>
+			    	<img src="img/rightswipt.jpg" />
+			    </div>
 			</div>
-			<div class="b-footer"></div>
+			<%- include('foot') %>
 		</div>
 	</body>
 	<script>
+		//控制底部轮播
+		var s=0;
+		$(".mainproduct img").eq(0).click(function(){
+			if(s>-3){
+			s--;
+			$(".b-content").css("transform","translateX("+s*25+"%)");
+			}
+		})
+			$(".mainproduct img").eq(1).click(function(){
+			if(s<0){
+				s++;
+			$(".b-content").css("transform","translateX("+s*25+"%)");
+			}
+		})
+		//轮播图定时器
+		setInterval(function(){
+			if(s<0&&s>-3){
+				if(which==0){
+					s--;
+				}
+				else if(which==1){
+					s++;
+				}
+				$(".b-content").css("transform","translateX("+s*25+"%)");
+			}
+			else if(s==-3){
+				s++;
+				which=1;
+				$(".b-content").css("transform","translateX("+s*25+"%)");
+			}
+			else if(s==0){
+				s--;
+				which=0;
+				$(".b-content").css("transform","translateX("+s*25+"%)");
+			}
+		},4000)
+		//控制panel
+		var can=0;
+		var cannone=1;
+		$('.panel').hover(function(){
+			if(can){
+				cannone=0;
+			}
+		},function(){
+			cannone=1;
+			$(this).css("opacity","0")
+		})
+		
+		$(".h-header li.prod").hover(function(){
+			$('.panel').css("opacity","1")
+		},function(){
+			can=1;
+			setTimeout(function(){
+				can=0;
+				if(cannone){
+					$('.panel').css("opacity","0")
+				}
+			},300);
+		})
 		$(".c-c-warp").eq(0).fadeIn();
 		//控制第一个导航条
 		$(".spread").click(function(){
