@@ -1,13 +1,98 @@
 <div class="h-header">
-					<img src="img/biao.png" />
+					<img src="img/title.png" />
 					<div class="spread">
 						<div class="line"></div>
 					</div>
 					<ul class="ul">
-						<li><a href="/">MAIN</a></li>
-						<li><a href="product">PRODUCTS</a></li>
-						<li><a href="service">SERVICE</a></li>
-						<li><a href="product">PARTENER</a></li>
 						<li><a href="contact">CONTACT</a></li>
+						<li><a href="partener">PARTENER</a></li>
+						<li><a href="service">SERVICE</a></li>
+						<li class="prod"><a href="product">PRODUCTS</a></li>
+						<li><a href="/">MAIN</a></li>
 					</ul>
 			</div>
+<div class="panel">
+					  	 <ul>
+					  	 	<li>
+					  	 		<dl>
+					  	 			<dt><a href="">X ray machine</a></dt>
+					  	 			<dd><a href="">HD501</a></dd>
+					  	 			<dd><a href="">HD502</a></dd>
+					  	 			<dd><a href="">HD601</a></dd>
+					  	 			<dd><a href="">HD60</a></dd>
+					  	 		</dl>
+					  	 	</li>
+					  	 	<li>
+					  	 		<dl>
+					  	 			<dt><a href="">DR</a></dt>
+					  	 			<dd><a href="">KPET4500</a></dd>
+					  	 			<dd><a href="">KPET5500</a></dd>
+					  	 			<dd><a href="">KPET6000</a></dd>
+					  	 		</dl>
+					  	 	</li>
+					  	 	<li>
+					  	 		<dl>
+					  	 			<dt><a href="">Ultrasound</a></dt>
+					  	 			<dd><a href="">Portable ultrasound HD501</a></dd>
+					  	 			<dd><a href="">Portable ultrasound HD502</a></dd>
+					  	 			<dd><a href="">Movable ultrasound HD601</a></dd>
+					  	 			<dd><a href="">Movable ultrasound HD60</a></dd>
+					  	 		</dl>
+					  	 	</li>
+					  	 	<li>
+					  	 		<dl>
+					  	 			<dt><a href="">Inspection</a></dt>
+					  	 			<dd><a href="">maravillosas experiencias</a></dd>
+					  	 			<dd><a href="">nos ratifican como la empresanos ratifican como la empresa</a></dd>
+					  	 			<dd><a href="">nos ratifican como la empresa</a></dd>
+					  	 			<dd><a href="">nos ratifican como la empresa</a></dd>
+					  	 		</dl>
+					  	 	</li>
+					  	 	<li>
+					  	 		<dl>
+					  	 			<dt><a href="">Anesthesia</a></dt>
+					  	 			<dd><a href="">maravillosas experiencias</a></dd>
+					  	 		</dl>
+					  	 	</li>
+					  	 	<li>
+					  	 		<dl>
+					  	 			<dt><a href="">Others</a></dt>
+					  	 			<dd><a href="">maravillosas experiencias</a></dd>
+					  	 			<dd><a href="">nos ratifican como la empresanos ratifican como la empresa</a></dd>
+					  	 			<dd><a href="">nos ratifican como la empresa</a></dd>
+					  	 		</dl>
+					  	 	</li>
+					  	 </ul>
+					  </div>
+<script>
+		//控制panel
+		var can=0;
+		var cannone=1;
+		$('.panel').hover(function(){
+			if(can){
+				cannone=0;
+			}
+		},function(){
+			cannone=1;
+			$(this).css("display","none")
+		})
+		
+		$(".h-header li.prod").hover(function(){
+			$('.panel').css("display","block")
+		},function(){
+			can=1;
+			setTimeout(function(){
+				can=0;
+				if(cannone){
+					$('.panel').css("display","none")
+				}
+			},300);
+		})
+		//控制第一个导航条
+		$(".spread").click(function(){
+			if($('.h-header ul').css("display")=="none")
+			$(".h-header ul").css("display","block")
+			else
+			$(".h-header ul").css("display","none")
+		})
+</script>					  

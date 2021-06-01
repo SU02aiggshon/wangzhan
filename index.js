@@ -40,7 +40,11 @@ app.use( async ( ctx ) => {
 			await ctx.render('service', {
         })
 		}
+			else if(ctx.url=="/partener"){
+			await ctx.render('partener', {
+        })
+		}
 })
 
-app.listen(3000)
+app.listen(3001)
 console.log('[demo] start-quick is starting at port 3000')

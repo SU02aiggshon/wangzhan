@@ -18,6 +18,9 @@
 		*{
 			font-family: "微软雅黑";
 			}
+		.panel>ul{
+			display: none;
+		}	
 		.bb-footer{
 			margin-top: 100px;
 			width: 100%;
@@ -34,84 +37,27 @@
 			margin: auto;
 			min-height: 100px;
 			}	
-		.h-header{
-			margin: auto;
-			box-sizing: border-box;
-			padding-bottom: 20px;
-			width: 100%;
-		}
-		.h-header img{
-			display: block;
-			width: 20%;
-			height: 40px;
-			padding-right: 6%;
-			float: left;
-			margin-left: 30px;
-			margin-top: 20px;
-		}
-		.h-header li{
-			display: block;
-			font-family: "微软雅黑";
-			cursor: pointer;
-			text-align: center;
-			color: black;
-			font-weight: 700;
-			float: left;
-			width: 100px;
-			height: 40px;
-			line-height: 40px;
-			margin: 20px 20px;
-		}
-		.h-header ul{
-			display: block;
-			}
-		.spread{
-			width: 50px;
-			height: 50px;
-			background: black;
-			float: right;
-			margin-top: 20px;
-			display: none;
-		}
-		.line{
-			margin-top: 12.5px;
-			margin-left: 10px;
-			padding: 5px 0;
-			background-color: white;
-			background-clip:content-box;
-			border-top:5px solid white ;
-			border-bottom:5px solid white ;
-			width: 30px;
-			height: 5px;
-		}
-		.c-c-warp{
-			display: none;
-			position: absolute;
-			left: 0;
-			top: 0;
-			width: 100%;
-			height: 100%;
-		}
 		.mainproduct{
 			clear: both;
 			width: 100%;
 		}
 		.pro-top{
 			position: relative;
-			margin-top: 100px;
 			width: 100%;
-			height: 600px;
+			height: 500px;
 		}
 		.pro-top p{
+			color: rgba(150,150,150,0.8);
 			right: 0;
 			position: absolute;
 			font-size: 40px;
 			text-align: center;
 			display: block;
 			float: left;
-			line-height: 600px;
+			line-height: 500px;
 			width: 10%;
 			height: 100%;
+			z-index: 100;
 		}
 		.pro-top p:first-child{
 			z-index: 20;
@@ -121,7 +67,7 @@
 			text-align: center;
 			display: block;
 			float: left;
-			line-height: 600px;
+			line-height: 500px;
 			width: 10%;
 			height: 100%;
 		}
@@ -135,17 +81,289 @@
 			height: 100%	
 		}	
 		.pro-top .pro-con span{
-			transition: 0.7s;
+			position: relative;
 			display: block;
-			width: 400%;
+			width: 100%;
 			height: 100%;
 		}	
-		.pro-top .pro-con span img{
-			display: block;
-			width: 25%;
+		.pro-top .pro-con span div.img{
+			left: 0;
+			top: 0;
+			display: none;
+			width: 100%;
 			height: 100%;
-			float: left;
-		}		
+			position: absolute;
+		}
+		.pro-top .pro-con span div.imgtwo{
+			display: none;
+			left: 0;
+			top: 0;
+			display: none;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+		}
+		.pro-top .pro-con span div.imgfour{
+			display: none;
+			left: 0;
+			top: 0;
+			display: none;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+		}
+		.pro-top .pro-con span div.imgfour div{
+			z-index: 5;
+			position: absolute;
+			left: 10%;
+			top: 0;
+			width: 50%;
+			height: 100%;
+		}
+		.pro-top .pro-con span div.imgfour img{
+			opacity: 0;
+			position: absolute;
+			right: 5%;
+			width: 50%;
+			height: 100%;
+		}
+		.pro-top .pro-con span div.imgfour div h3{
+			transition: 0.4s;
+			margin-top: 20px;
+			width: 100%;
+			font-size: 38px;
+			font-weight: 700;
+		}
+		.pro-top .pro-con span div.imgfour div span.in-content{
+			transition: 0.4s;
+			margin-top: 20px;
+			display: block;
+			font-size: 23px;
+			width: 100%;
+			color: blue;
+			height: auto;
+		}
+		.pro-top .pro-con span div.imgfour div span.in-foot{
+			transition: 0.4s;
+			margin-top: 20px;
+			color: green;
+			display: block;
+			font-size: 42px;
+			width: 100%;
+			font-weight: 700;
+			height: auto;
+		}
+		.pro-top .pro-con span div.imgfour div span.href{
+			transition: 0.4s;
+			display: block;
+			width: 200px;
+			height: 40px;
+			line-height: 40px;
+			color: white;
+			text-align: center;
+			border-radius:5px ;
+			background: blue;
+			font-size: 25px;
+			margin: 40px 30px;
+			font-weight: 800;
+		}
+		.pro-top .pro-con span div.imgthree{
+			display: none;
+			left: 0;
+			top: 0;
+			display: none;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+		}
+		.pro-top .pro-con span div.imgthree div{
+			z-index: 5;
+			position: absolute;
+			right: 0;
+			top: 0;
+			width: 50%;
+			height: 100%;
+		}
+		.pro-top .pro-con span div.imgthree img{
+			opacity: 0;
+			position: absolute;
+			left: 0;
+			width: 50%;
+			height: 100%;
+		}
+		.pro-top .pro-con span div.imgthree div h3{
+			transition: 0.4s;
+			margin-top: 50px;
+			width: 100%;
+			font-size: 38px;
+			font-weight: 700;
+		}
+		.pro-top .pro-con span div.imgthree div span.in-content{
+			transition: 0.4s;
+			margin-top: 20px;
+			display: block;
+			font-size: 23px;
+			width: 100%;
+			color: blue;
+			height: auto;
+		}
+		.pro-top .pro-con span div.imgthree div span.in-foot{
+			transition: 0.4s;
+			margin-top: 20px;
+			color: green;
+			display: block;
+			font-size: 42px;
+			width: 100%;
+			font-weight: 700;
+			height: auto;
+		}
+		.pro-top .pro-con span div.imgthree div span.href{
+			transition: 0.4s;
+			display: block;
+			width: 200px;
+			height: 40px;
+			line-height: 40px;
+			color: white;
+			text-align: center;
+			border-radius:5px ;
+			background: blue;
+			font-size: 25px;
+			margin: 40px 30px;
+			font-weight: 800;
+		}
+		.pro-top .pro-con span div.imgtwo div{
+			z-index: 5;
+			position: absolute;
+			left: 10%;
+			top: 0;
+			width: 50%;
+			height: 100%;
+		}	
+		.pro-top .pro-con span div.imgtwo div h3{
+			transition: 0.5s;
+			margin-top: 50px;
+			width: 100%;
+			font-size: 38px;
+			font-weight: 700;
+		}
+		.pro-top .pro-con span div.imgtwo div span.in-content{
+			transition: 0.4s;
+			margin-top: 30px;
+			display: block;
+			font-size: 30px;
+			width: 100%;
+			color: blue;
+			height: auto;
+		}
+		.pro-top .pro-con span div.imgtwo div span.in-foot{
+			transition: 0.4s;
+			margin-top: 40px;
+			color: green;
+			display: block;
+			font-size: 42px;
+			width: 100%;
+			font-weight: 700;
+			height: auto;
+		}
+		.pro-top .pro-con span div.imgtwo div span.href{
+			transition: 0.4s;
+			display: block;
+			width: 200px;
+			height: 40px;
+			line-height: 40px;
+			color: white;
+			text-align: center;
+			border-radius:5px ;
+			background: blue;
+			font-size: 25px;
+			margin: 40px 30px;
+			font-weight: 800;
+		}
+		.pro-top .pro-con span div.imgtwo img{
+			opacity: 0;
+			position: absolute;
+			right: 10%;
+			width: 50%;
+			height: 100%;
+		}
+		.pro-top .pro-con span div.img img:first-child{
+			left: 0;
+			margin-left: 2%;
+			width: 23%;
+		}
+		.pro-top .pro-con span div.img img{
+			margin-top: 40px;
+			opacity: 0;
+			position: absolute;
+			right: 0;
+			width: 40%;
+			height: 100%;
+		}	
+		.pro-top .pro-con span div.img div{
+			z-index: 5;
+			position: absolute;
+			left: 25%;
+			width: 45%;
+			height: 100%;
+		}
+		.pro-top .pro-con span div.img div h3{
+			font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+			margin-top: 50px;
+			width: 100%;
+			height: 40px;
+			line-height: 40px;
+			font-weight: 700;
+			font-size: 35px;
+			color: black;
+		}
+		.pro-top .pro-con span div.img div span.in-content{
+			font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+			font-weight: 700;
+			margin-top: 10px;
+			display: block;
+			font-size: 39px;
+			color: blue;
+			width: 100%;
+			height: auto;
+		}
+		.pro-top .pro-con span div.img div span.in-foot1{
+			font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+			margin-top: 15px;
+			display: block;
+			font-size: 25px;
+			width: 100%;
+			height: auto;
+		}
+		.pro-top .pro-con span div.img div span.in-foot2{
+			font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+			margin-top: 10px;
+			display: block;
+			font-size: 20px;
+			width: 100%;
+			height: auto;
+		}
+		.pro-top .pro-con span div.img div span.in-foot3{
+			font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+			margin-top: 15px;
+			display: block;
+			font-size: 35px;
+			font-weight: 700;
+			color: green;
+			width: 100%;
+			height: auto;
+		}
+		.pro-top .pro-con span div.img div span.href{
+			display: block;
+			width: 150px;
+			height: 40px;
+			line-height: 40px;
+			color: white;
+			text-align: center;
+			border-radius:5px ;
+			background: blue;
+			font-size: 25px;
+			margin: 40px 30px;
+		}
 		.chose{
 			padding: 0 100px;
 			margin-top: 30px;
@@ -202,7 +420,7 @@
 			margin-left: 10px;
 			height: 20px;
 			border-radius:50%;
-			background: white;
+			background: rgba(150,150,150,0.5);
 			}
 		.four li.fir{
 			margin-left: 0;
@@ -227,7 +445,6 @@
 			width: 90%;
 			height: 100%;
 			float: left;
-			background: url(img/newdog.png);
 			background-size:100% 100% ;
 			}		
 		@media only screen and (max-width: 1000px) {
@@ -238,15 +455,6 @@
 			padding: 0 50px;
 			margin-top: 30px;
 			}	
-			.spread{
-				border-radius:5px ;
-			width: 50px;
-			height: 50px;
-			background: black;
-			float: right;
-			margin: 20px 20px;
-			display: block;
-		}
 		.chose li span p{
 			font-size: 13px;
 			width: 80%;
@@ -279,14 +487,6 @@
 			background-size:100% 100% ;
 			width: 50%;
 			float: left;
-		}
-			.spread2{
-			float: right;
-			margin-right: 20px;
-			background: black;
-			width: 50px;
-			height: 50px;
-			display: block;
 		}
 		}
 		@media only screen and (max-width: 500px ) {
@@ -331,17 +531,53 @@
 		}*/
 	</style>
 	<body>
+		<%- include('head') %>
 		<div class="warp">
-			<%- include('head') %>
 			    <div class="mainproduct">
 			    	<div class="pro-top">
 			    		<p><</p>
 			    			<div class="pro-con">
 			    				<span>
-			    				<a><img src='../img/newdog.png' /></a>
-			    				<a><img src="../img/test3.jpg" /></a>
-			    				<a><img src='../img/test3.jpg' /></a>
-			    				<a><img src="../img/test4.jpg" /></a>
+			    				<a><div class="img">
+			    					<img src="img/rrayleft.jpg" />
+			    					<div>
+			    						<h3>VETERINARY X RAY MACHINE </h3>
+			    						<span class="in-content">PROVIDE OEM/ODM SERVICE,  </span>
+			    						<span class="in-foot1">manufacture x ray table as required.</span>
+			    						<span class="in-foot2">High frequency high voltage generator, excellent image.</span>
+			    						<span class="in-foot3">TOP SALE IN CHINESE VETERINARY MARKET </span>
+			    						<span class="href">view more</span>
+			    					</div>
+			    					<img src="/img/rayright.jpg" />
+			    				</div></a>
+			    				<a><div class="imgtwo">
+			    					<div>
+			    						<h3>VERERINARY ANESTHESIA</h3>
+			    						<span class="in-content">Looking reliable and compatible business partnership all around the world</span>
+			    						<span class="in-foot">DIFFERENT MODELS</span>
+			    						<span class="href">VIEW MORE</span>
+			    					</div>
+			    					<img src="/img/secright.jpg" />
+			    				</div></a>
+			    				<a><div class="imgthree">
+			    					<div>
+			    						<h3>INSPECTION MACHINE</h3>
+			    						<span class="in-content">Rapid -Reliable-Quantitative-Convenient </span>
+			    						<span class="in-foot">INNOVATION FOR CLINICAL DIAGNOSIS</span>
+			    						<span class="href">VIEW MORE</span>
+			    					</div>
+			    					<img src="/img/fourleft.jpg" />
+			    				</div></a>
+			    				<a><div class="imgfour">
+			    					<div>
+			    						<h3>RUIGE - COMPREHENSIVE SUPPLIER OF IMAGING PRODUCTS:</h3>
+			    						<span class="in-content">
+MRI - CT- X ray machine- Computed radiography- Digital radiography- Ultrasound-Endoscopy</span>
+			    						<span class="in-foot">DESIGNED SPECIFICALLY FOR ANIMALS</span>
+			    						<span class="href">VIEW MORE</span>
+			    					</div>
+			    					<img src="/img/thirdright.jpg" />
+			    				</div></a>
 			    				</span>
 			    			</div>
 			    		<p>></p>	
@@ -402,47 +638,142 @@
 		</div>
 	</body>
 	<script>
-		var which=0;
+		var which=1;
 		var s=0;
-		$(".pro-top p").eq(0).click(function(){
-			if(s>-3){
-			s--;
-			$(".pro-con span").css("transform","translateX("+s*25+"%)");
-			}
-		})
-			$(".pro-top p").eq(1).click(function(){
-			if(s<0){
-				s++;
-			$(".pro-con span").css("transform","translateX("+s*25+"%)");
-			}
-		})
-		//轮播图定时器
-		setInterval(function(){
-			if(s<0&&s>-3){
-				if(which==0){
-					s--;
-				}
-				else if(which==1){
-					s++;
-				}
-				$(".pro-con span").css("transform","translateX("+s*25+"%)");
-			}
-			else if(s==-3){
-				s++;
-				which=1;
-				$(".pro-con span").css("transform","translateX("+s*25+"%)");
+		imgfade(s)
+		function swift(){
+			if(s==3){
+				which=-1;
 			}
 			else if(s==0){
-				s--;
-				which=0;
-				$(".pro-con span").css("transform","translateX("+s*25+"%)");
+			which=1;
 			}
-		},4000)
+			s=s+which;
+			imgfade(s);
+		}
+		
+		function imgfade(ss){
+			console.log(which)
+			console.log(s)
+			$(".pro-con a>div img").stop();
+			$(".pro-con a>div").stop()
+			$(".pro-con a>div img").css("opacity","0")
+			$(".pro-con a>div").css("display","none")
+			if(ss==2){
+					$(".imgthree").css("display","block");
+					$(".imgthree h3").css({"transform":"translateX(70px)","opacity":"0"})
+				    $(".imgthree span.in-foot").css({"transform":"translateX(70px)","opacity":"0"})
+				    $(".imgthree span.in-content").css({"opacity":"0"})
+				    $(".imgthree span.href").css({"transform":"translateX(70px)","opacity":"0"})
+					$(".imgthree img").animate({opacity:"1"},500)
+					setTimeout(function(){
+						$(".imgthree h3").css({"transform":"translateX(0px)","opacity":"1",})
+						setTimeout(function(){
+						$(".imgthree span.in-foot").css({"transform":"translateX(0)","opacity":"1"})
+						setTimeout(function(){
+							$(".imgthree span.in-content").css({"opacity":"1"})
+				            $(".imgthree span.href").css({"transform":"translateX(0)","opacity":"1"})
+						},300)
+					},300)
+					},500)
+				
+			}
+			else if(ss==3){
+					$(".imgfour").css("display","block");
+					$(".imgfour h3").css({"transform":"translateX(-70px)","opacity":"0"})
+				    $(".imgfour span.in-foot").css({"transform":"translateX(-70px)","opacity":"0"})
+				    $(".imgfour span.in-content").css({"opacity":"0"})
+				    $(".imgfour span.href").css({"transform":"translateX(-70px)","opacity":"0"})
+				    setTimeout(function(){
+					$(".imgfour h3").css({"transform":"translateX(0px)","opacity":"1",})
+					setTimeout(function(){
+						$(".imgfour span.in-foot").css({"transform":"translateX(0)","opacity":"1"})
+						setTimeout(function(){
+							$(".imgfour span.in-content").css({"opacity":"1"})
+				            $(".imgfour span.href").css({"transform":"translateX(0)","opacity":"1"})
+				            $(".imgfour img").animate({opacity:"1"},1000)
+						},300)
+					},300)
+				},100)
+			}
+			else if(ss==1){
+				$(".imgtwo").css("display","block");
+				$(".imgtwo h3").css({"transform":"translateX(-70px)","opacity":"0"})
+				$(".imgtwo span.in-foot").css({"transform":"translateX(-70px)","opacity":"0"})
+				$(".imgtwo span.in-content").css({"opacity":"0"})
+				$(".imgtwo span.href").css({"transform":"translateX(-70px)","opacity":"0"})
+				setTimeout(function(){
+					$(".imgtwo h3").css({"transform":"translateX(0px)","opacity":"1",})
+					setTimeout(function(){
+						$(".imgtwo span.in-foot").css({"transform":"translateX(0)","opacity":"1"})
+						setTimeout(function(){
+							$(".imgtwo span.in-content").css({"opacity":"1"})
+				            $(".imgtwo span.href").css({"transform":"translateX(0)","opacity":"1"})
+				            $(".imgtwo img").animate({opacity:"1"},1000)
+						},300)
+					},300)
+				},100)
+			}
+			else{
+				$(".img").css("display","block");
+				$(".img span.in-content").css({'margin-left':"70px","opacity":"0"})
+				$(".img h3").css({'margin-left':"70px","opacity":"0"})
+				$(".img span.in-foot3").css({'margin-left':"70px","opacity":"0"})
+				$(".img span.in-foot2").css({"opacity":"0"})
+				$(".img span.in-foot1").css({"opacity":"0"})
+				$(".img span.href").css({"opacity":"0","margin-left":"70px"})
+					$(".img img:last").animate({opacity:"1"},500,function(){
+						$(".img span.in-content").animate({"opacity":"1","margin-left":"0"},400,function(){
+							$(".img h3").animate({"opacity":"1",'margin-left':"0"},300)
+							$(".img span.in-foot3").animate({"opacity":"1",'margin-left':"0"},200,function(){
+								$(".img span.href").animate({"opacity":"1","margin-left":"0"},300)
+								$(".img span.in-foot2").animate({"opacity":"1"},300)
+								$(".img img:first").animate({opacity:"1"},300,)
+				                $(".img span.in-foot1").animate({"opacity":"1"},100)
+							})
+						})
+					})
+			}           
+		}
+		//初始化轮播
+		//轮播图定时器
+		var swipt=setInterval(swift,5000)
+		//轮播左右移动
+		$(".pro-top p:first").click(function(){
+			if(s>0&&s<3){
+				s--;
+			}
+			else if(s==3){
+				s=2
+			}
+			else if(s==0){
+				which=-1
+				s=3;
+			}
+			imgfade(s)
+		})
+		$(".pro-top p:last").click(function(){
+			if(s>0&&s<3){
+				s++
+			}
+			else if(s==3){
+				s=0;
+				which=1;
+			}
+			else if(s==0){
+				s=1
+			}
+			imgfade(s)
+		})
 		//控制轮播图里的圆圈
 		for(var i=0;i<4;i++){
 			(function(k){
 				$(".four li").eq(k).hover(function(){
-			$(".pro-con span").css("transform","translateX("+k*-25+"%)");
+					s=k;
+					imgfade(s)
+					clearInterval(swipt);
+		},function(){
+			swipt=setInterval(swift,5000)
 		})
 			})(i)
 		}
@@ -465,12 +796,5 @@
 		})
 			})(i)
 		}
-		//控制第一个导航条
-		$(".spread").click(function(){
-			if($('.h-header ul').css("display")=="none")
-			$(".h-header ul").css("display","block")
-			else
-			$(".h-header ul").css("display","none")
-		})
 	</script>
 </html>

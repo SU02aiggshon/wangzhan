@@ -3,8 +3,10 @@
 	<head>
 		<meta charset="utf-8" />
 		<title></title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="css/resect.css" />
 		<link rel="stylesheet" href="css/public.css" />
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.js"></script>
 	</head>
 	<style>
 		.s-content{
@@ -24,6 +26,7 @@
 			width: 50%;
 			margin: auto;
 			text-align: center;
+			color: rgba(150,150,150,1) ;
 		}
 		.s-content ul{
 			width: 980px;
@@ -61,12 +64,13 @@
 		}
 		.s-content li span p{
 			width: 100%;
+			color: rgba(150,150,150,1) ;
 		}
 		.s-top{
 			box-sizing: border-box;
 			width: 100%;
 			padding-top: 50%;
-			background: url(img/contact.jpg);
+			background: url(img/conta.jpg);
 			background-size:100% 100% ;
 		}
 		.s-top h1{
@@ -83,6 +87,7 @@
 			text-align: center;
 		}
 		.s-advantage i{
+			color: rgba(150,150,150,1) ;
 			display: block;
 			font-size: 14px;
 			width: 400px;
@@ -119,10 +124,129 @@
 			margin-top:20px;
 		}
 		.s-advantage li p{
+			color: rgba(150,150,150,1) ;
 			width: 100%;
 			text-align: center;
 			font-size: 13px;
 			margin-top: 10px;
+		}
+		@media only screen and (max-width:1000px ) {
+		.s-content ul{
+			width: 680px;
+			overflow: auto;
+			margin: auto;
+			margin-top: 100px;
+		}
+		.s-content li{
+			float: left;
+			overflow: auto;
+			width: 300px;
+			margin-top: 50px;
+			margin-left: 0;
+		}
+		.s-content li:last-child{
+			margin-left: 80px;
+		}
+		.s-content ul li:first-child{
+			float: left;
+			overflow: auto;
+			width: 100%;
+			box-sizing: border-box;
+			padding-left: 50%;
+			margin-left: -25%;
+			margin-top: 0;
+		}
+		.s-advantage ul{
+			margin: auto;
+			width: 550px;
+			overflow: auto;
+			margin-top: 30px;
+		}
+		.s-advantage ul li:nth-child(4){
+			margin-left: 100px;
+		}
+		.s-advantage ul li{
+			margin-top: 40px;
+		}
+		@media only screen and (max-width:700px ) {
+		.s-content ul{
+			width: 300px;
+			overflow: auto;
+			margin: auto;
+			margin-top: 30px;
+		}
+		.s-content h1{
+			font-size: 20px;
+		}
+		.s-content i{
+			font-size: 12px;
+		}
+		.s-content li{
+			float: left;
+			overflow: auto;
+			width: 300px;
+			margin-top: 30px;
+			margin-left: 0;
+		}
+		.s-content li span h2{
+			font-size: 18px;
+		}
+		.s-content li span p{
+			font-size: 10px;
+		}
+		.s-content li:last-child{
+			margin-left: 0px;
+		}
+		.s-content ul li:first-child{
+			float: left;
+			overflow: auto;
+			width: 300px;
+			box-sizing: border-box;
+			padding-left: 0;
+			margin-left: 0;
+			margin-top: 0;
+		}
+		.s-advantage ul{
+			margin: auto;
+			width: 320px;
+			overflow: auto;
+			margin-top: 30px;
+		}
+		.s-advantage i{
+			font-size: 12px;
+		}
+		.s-advantage h1{
+			font-size: 20px;
+		}
+		.s-advantage ul li{
+			float: left;
+			width: 150px;
+			margin-left: 0;
+		}
+		.s-advantage ul li:nth-child(4){
+			margin-left: 0;
+		}
+		.s-advantage ul li:last-child{
+			box-sizing: border-box;
+			width: 100%;
+			padding-left: 50%;
+			margin-left: -25%;
+		}
+		.s-advantage ul li h2{
+			font-size: 18px;
+		}
+		.s-advantage ul li p{
+			padding: 0 5px;
+			box-sizing: border-box;
+			font-size: 8px;
+		}
+		.s-advantage i{
+			width: 100%;
+			display: block;
+			box-sizing: border-box;
+			padding: 0 5px;
+		}
+		}
 		}
 	</style>
 	<body>
@@ -133,7 +257,7 @@
 		<div class="s-content">
 			<h1>Our Service</h1>
 			<i>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut 
-et dolore magna aliqua. Ut enim ad minim veniamt dolore magna aliqua. Ut enim ad minim veniam</i>
+et dolore ma</i>
             <div class="service-detail">
             	<ul>
             		<li>
@@ -199,4 +323,12 @@ et dolore magna aliqua. Ut enim ad mini</p>
 		</div>
 		<%- include('foot') %>
 	</body>
+	<script type="text/javascript">
+		$(".spread").click(function(){
+			if($('.h-header ul').css("display")=="none")
+			$(".h-header ul").css("display","block")
+			else
+			$(".h-header ul").css("display","none")
+		})
+	</script>
 </html>
